@@ -1,0 +1,26 @@
+<div class="add-todo">
+  <input #text type="text" maxlength="30" />
+  <button (click)="addTodo(text.value)">Add Todo</button>
+</div>
+<div class="todos">
+  <div class="todo" *ngFor="let todo of todos">
+    <i
+      [ngClass]="
+        todo.done ? 'fa-regular fa-square-check' : 'fa-regular fa-square'
+      "
+      (click)="toggleDone(todo.id, !todo.done)"
+    ></i>
+    <span
+      (keydown)="keyDown($event, todo.id)"
+      class="todo-text"
+      #todoText
+      contenteditable="false"
+      maxlength="30"
+      >{{ todo.text }}</span
+    >
+    <div class="edit">
+      <i (click)="editText(todoText)" class="fa-solid fa-pen"></i>
+      <i (click)="deleteTodo(todo.id)" class="fa-solid fa-trash"></i>
+    </div>
+  </div>
+</div>

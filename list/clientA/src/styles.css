@@ -1,0 +1,44 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+.border {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.main {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.todo {
+  min-width: 380px;
+  max-width: 380px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.todo-text {
+  display: inline-block;
+  word-wrap: break-word;
+  max-width: 300px;
+  outline: none;
+  flex-grow: 1;
+}
+.edit {
+  min-width: 50px;
+  max-width: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.add-todo {
+  margin-bottom: 20px;
+}
+button {
+  cursor: pointer;
+}
+.fa-trash {
+  color: rgb(196, 70, 16);
+}
